@@ -1,0 +1,76 @@
+<!--pages/weather/weather.wxml-->
+<!--背景图片-->
+<image src="../../res/img/bg2.jpg" class="bg" mode="widthFix"></image>
+
+<view class="container">
+  <!--实时天气状况-->
+  <view class="nowWeather">
+    <view class="temp w ">{{curtemp}}</view>
+    <view>
+      <view class="city w">{{city}}</view>
+      <view class="topfoat w">{{district}} {{street}}</view>
+      <view class="topfoat w">{{date}}</view>
+      <view class="topfoat w">{{type}}
+      <image class="typeImg" src = "{{pic1}}"></image></view>
+    </view>
+  </view>
+
+<!--傻羊图片
+<image src="../../res/img/goat.png" class="goatImg"></image>-->
+<!--七天天气背景图片
+<image src="../../res/img/kuang.png" class="daysBg" mode="widthFix"></image>-->
+
+  <!--未来天气信息的背景*************************************************************-->
+<view class = "test" mode="widthFix">
+  <!-- 几列未来天气 -->
+  <view class="weahterDetail topfoat center foredetail">
+    <view wx:for="{{forecast}}" wx:for-index="i" wx:for-item="item">
+      <!--第一行-->
+      <view class = "week">{{item.date}}</view>
+      <!--第二行--> 
+      <image class="typeImg" src = "{{item.pic1}}"></image>
+      <!-- <image class="typeImg">{{item.dayPictureUrl}}</image>  -->
+      <!--第三行-->
+      <view class = "foretemp">{{item.temperature}}</view>
+    </view>
+
+    <view wx:for="{{forecast}}" wx:for-index="i" wx:for-item="item">
+      <!--第一行-->
+      <view class="{{ loaded ? 'font-loaded' : '' }}">
+        <view class="Bl center">THE</view>
+      </view>
+      <!--第二行--> 
+      <image class="typeImg" src = "{{item.pic1}}"></image>
+      <!--第三行-->
+      <view class="Bl b center">{{item.temperature}}</view>
+    </view>
+  </view>
+</view>
+
+<!--今日天气详细信息
+  <view class="pm25 w">空气 {{qlty}} {{pm25}}</view>-->
+
+    <!--详细的天气信息*************************************************************-->
+  <view class="weahterDetail todaydetail">
+    <!--第一列-->
+    <view class="">
+      <view wx:if="{{sc == '微风'}}" class="fontr1">微风</view>
+      <view wx:else class="fontr1">{{sc}}级</view>
+      <view class="fontr2">{{dir}}</view>    
+    </view>
+    <!--分隔-->
+    <view class="l"></view>
+    <!--第二列--> 
+    <view class="">
+      <view class="fontr1">{{temp}}</view>
+      <view class="fontr2">气温</view>    
+    </view>
+    <!--分隔-->
+    <view class="l"></view>
+    <!--第三列-->
+    <view class="">
+      <view class="fontr1">{{pm25}} {{qlty}}</view>
+      <view class="fontr2">空气质量</view>
+    </view>
+  </view>
+</view>
