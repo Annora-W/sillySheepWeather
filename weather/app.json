@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/weather/weather",
+    "pages/life/life",
+    
     "pages/index/index",
     "pages/logs/logs"
     
@@ -10,5 +12,27 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气情况"
+      },
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活指数"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "关于傻羊"
+      }
+    ]
   }
+
+
 }

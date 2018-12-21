@@ -1,0 +1,69 @@
+<!--pages/life/life.wxml-->
+<!--背景图片-->
+<image src="../../res/img/bg2.jpg" class="bg2" mode="widthFix"></image>
+
+<view class="container">
+
+  <view class="suggestion">
+    <view wx:for="{{lifeindex}}" wx:for-index="i" wx:for-item="item">
+
+      <!-- 提问 -->
+      <view class="list1">
+        <view class="list_l">
+          <image src="../../res/icon/{{i}}.png"></image>
+          <!-- <text>{{item.tipt}}</text> -->
+        </view>
+        <view class="list_r" >
+          <text class="list_t" style="background-image: url('../../res/img/kuang1.png')">傻羊傻羊！{{item.tipt}}是什么？</text>
+          <!-- <text>{{item.des}}</text> -->
+        </view>
+      </view>
+      <!-- 回答 -->
+      <view class="list2">
+        <view class="list_r" >
+          <text class="list_t" style="background-image: url('../../res/img/kuang2.png')">咩~ {{item.tipt}}{{item.zs}}，{{item.des}}</text>
+          <!-- <text></text> -->
+        </view>
+        <view class="list_l">
+          <image src="../../res/icon/yang.png"></image>
+          <!-- <text>{{item.tipt}}</text> -->
+        </view>
+      </view>
+    </view>
+<!-- 提问 -->
+      <view class="list1">
+        <view class="list_l">
+          <image src="../../res/icon/1.png"></image>
+          <!-- <text>{{item.tipt}}</text> -->
+        </view>
+        <view class="list_r" >
+          <text class="list_t" style="background-image: url('../../res/img/kuang1.png')">傻羊傻羊！你是什么？</text>
+          <!-- <text>{{item.des}}</text> -->
+        </view>
+      </view>
+      <!-- 回答 -->
+      <view class="list2">
+        <view class="list_r" >
+          <text class="list_t" style="background-image: url('../../res/img/kuang2.png')">咩~ 你的问题太多啦Pia!(ｏ ‵-′)ノ</text>
+        </view>
+        <view class="list_l">
+          <image src="../../res/icon/yang.png"></image>
+          <!-- <text>{{item.tipt}}</text> -->
+        </view>
+      </view>
+
+      <view class="list1">
+        <view class="list_l">
+          <image src="../../res/icon/1.png"></image>
+          <!-- <text>{{item.tipt}}</text> -->
+        </view>
+        <view class="list_r" >
+          <text class="list_t" style="background-image: url('../../res/img/kuang1.png')">呜。。</text>
+          <!-- <text>{{item.des}}</text> -->
+        </view>
+      </view>
+    
+
+    
+  </view>
+</view>

@@ -1,0 +1,51 @@
+/* pages/life/life.wxss */
+/* page { */
+/* overflow:hidden; position:fixed;
+background-image:url('http://gss0.baidu.com/- Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/faf2b2119313b07e7121c16c0bd7 912397dd8c32.jpg'); 
+margin: 0px;*/
+/*下面的是关键的设置 100%显示 background-size: 100% 100%;
+}*/
+/* 背景 */
+.bg2{
+  width: 100%;
+}
+.container { 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;/**内边距**/ 
+  margin: 0;/**外边距**/ 
+  display: block;/**块级元素**/
+}
+.suggestion{ margin-top: 2%;}
+/* 提问 */
+.suggestion .list1{ display: flex; margin-top: 1px; 
+/* background-color: red; */
+margin-left: 20px;
+margin-right:40px;}
+/* 回答 */
+.suggestion .list2{ display: flex; margin-top: 1px; 
+/* background-color: white; */
+margin-right:20px;
+margin-left:40px;}
+/* 头像 */
+.suggestion .list_l image{ width:35px; height: 35px; display: block; margin: 0 auto;}
+/* background-color: black;} */
+/* 回答消息框 */
+.suggestion .list_l{ flex: 1; text-align: center; color: #bad; padding: 8px;}
+/* background-color: rgb(0, 255, 0)} */
+/* 提问消息框 */
+.suggestion .list_r{ flex: 4; padding-left: 3px; color: rgb(231, 183, 78);
+background-repeat: no-repeat;
+/* background-color: yellow} */}
+/*消息框文字*/
+.suggestion .list_t{ font-size: 12px; display: block; text-align: center; color: #333;
+/* background-color: #bad; */
+background-size: 100% 100%;
+-moz-background-size:100% 100%;
+padding-top:12px;
+padding-bottom: 12px;
+padding-left:5px;
+padding-right:5px;}
+

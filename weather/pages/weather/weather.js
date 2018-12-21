@@ -8,7 +8,7 @@ Page({
    */
   data: {
     day: day,
-    fontFamily: 'Bitstream Vera Serif Bold',
+    fontFamily: 'myfont',
   },
 
   /**
@@ -263,7 +263,7 @@ Page({
         //将变量存到临时数据存储器中（生活指数在下一个页面）
         wx.setStorage({
           key: 'life', //标签名
-          data: 'lifeindex', //数据
+          data: lifeindex, //数据
         })  
       },
       fail: function (res) { },
@@ -279,7 +279,11 @@ Page({
     const self = this
     wx.loadFontFace({
       family: this.data.fontFamily, //字体名字
-      source: 'url("https://sungd.github.io/Pacifico.ttf")', //网络字体
+      source: 'url("https://image.efguc.com/group1/M00/04/47/rBCXMlvS-hmAIXADAAAeyCIul1A471.ttf")', //网络字体
+      //https://github.com/Annora-W/sillySheepWeather/blob/master/res/xionghaizi.ttf?raw=true电脑行手机不行
+      //https://github.com/Annora-W/sillySheepWeather/blob/master/res/hanyiMiao.ttf
+     // https://sungd.github.io/Pacifico.ttf//可用的
+     //http://192.144.173.224/wx/hanyiMiao.ttf
       success(res) {
         console.log(res.status)
         self.setData({ loaded: true })

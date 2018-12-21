@@ -1,6 +1,6 @@
 <!--pages/weather/weather.wxml-->
 <!--背景图片-->
-<image src="../../res/img/bg2.jpg" class="bg" mode="widthFix"></image>
+<image src="../../res/img/bg.jpg" class="bg" mode="widthFix"></image>
 
 <view class="container">
   <!--实时天气状况-->
@@ -36,8 +36,8 @@
 
     <view wx:for="{{forecast}}" wx:for-index="i" wx:for-item="item">
       <!--第一行-->
-      <view class="{{ loaded ? 'font-loaded' : '' }}">
-        <view class="Bl center">THE</view>
+      <view class="{{ 'font-loaded' }}">
+        <view class="Bl center">周四THE</view>
       </view>
       <!--第二行--> 
       <image class="typeImg" src = "{{item.pic1}}"></image>
@@ -55,7 +55,7 @@
     <!--第一列-->
     <view class="">
       <view wx:if="{{sc == '微风'}}" class="fontr1">微风</view>
-      <view wx:else class="fontr1">{{sc}}级</view>
+      <view wx:else class="fontr1">{{sc}}</view>
       <view class="fontr2">{{dir}}</view>    
     </view>
     <!--分隔-->
